@@ -1,0 +1,4 @@
+$base-font-size: 16px !default;
+@function px2rem($px){//$px为需要转换的字号
+    @return $px / $base-font-size * 1rem; //40px为根字体大小
+}

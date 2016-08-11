@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+
+// 基本样式
+// ==============================
+html {
+    font-size: 62.5%;
+    color: #222;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/* 自定义页面样式
+   ========================================================================== */
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #fff;
+}
+a {
+    color: #666;
+    text-decoration: none;
+    &:hover,
+    &:active {
+        color: #0ae;
+        text-decoration: underline;
+    }
+}
+
+
+/* 页面样式
+   ========================================================================== */
+header h1 {
+	width: 90%;
+	font-size: px2rem(50px);
+	color: #47a3da;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: px2rem(156px);
+	margin-bottom: px2rem(170px);
+}
+.main {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.timeline {
+	overflow: hidden;
+	p {
+		margin: 0;
+	}
+	.line {
+		width: 20px;
+		background: #afdcf8;
+		float: left;
+		height: auto;
+		padding-bottom: 800px;
+		margin-bottom: -500px;
+	}
+	.info {
+		width: calc(100% - 420px);
+		float: right;
+		background: #6cbfee;
+		margin: 0 0 30px 0;
+		padding: 0 px2rem(80px) px2rem(90px);
+		border-radius: 10px;
+		position: relative;
+		.info-title {
+			font-size: px2rem(45px);
+			color: #fff;
+			border-bottom: 1px solid #a7d9f5;
+			line-height: 2;
+			padding-bottom: 28px;
+		}
+		p {
+			font-size: px2rem(30px);
+			color: #fff;
+		}
+
+		&:before {
+			content: '';
+			width: 0;
+			height: 0;
+			border-top: 21px solid transparent;
+			border-bottom: 21px solid transparent;
+			border-right: 21px solid #6cbfee;
+			position: absolute;
+			left: -21px;
+			top: 33px;
+		}
+	}
+	.dark-bg {
+		background-color: #3594cb;
+		&:before {
+			border-right: 21px solid #3594cb;
+		}
+	}
+	.date-block {
+		width: px2rem(226px);
+		float: left;
+		margin-right: px2rem(76px);
+		p{
+			font-weight: bold;
+			text-align: right;
+		}
+	}
+	.date-block .date {
+		font-size: px2rem(24px);
+		color: #bdd0db;
+	}
+	.date-block .time {
+		font-size: px2rem(70px);
+		color: #6cbfee;
+	}
+}
+
+@include mq($until:desktop) {
+    header h1 {
+		text-align: center;
+	}
+}
+@include mq($until:mobile) {
+    
+}
+@include mq($from:mobile, $until:desktop) {
+
+}
