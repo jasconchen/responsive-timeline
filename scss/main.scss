@@ -1,6 +1,6 @@
 /* mixin
    ========================================================================== */
-@import "_mq.scss";
+/* @import "_mq.scss";
 
 // Configuration
 $mq-responsive: true;
@@ -10,7 +10,7 @@ $mq-breakpoints: (
   tablet:  740px,
   desktop: 881px,
   wide:    1300px
-);
+); */
 
 
 @import "_mixin.scss";
@@ -18,7 +18,7 @@ $mq-breakpoints: (
 
 /* resetcss
    ========================================================================== */
-@import "_normalize.scss";
+// @import "_normalize.scss";
 
 /* funcss
    ========================================================================== */
